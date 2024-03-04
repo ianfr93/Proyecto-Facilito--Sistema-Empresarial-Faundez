@@ -35,15 +35,31 @@ html, body {
     position: relative; 
 }
 .register-login .image--points {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
-  background-image: linear-gradient(rgba(33, 59, 151, 0.335), rgba(11, 61, 119, 0.808)),url(../img/inicio\ de\ sesión/img-1.jpg);
-    background-size: cover; 
-    background-position: center; 
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0; 
+.register-login .image--points::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(1, 43, 101, 0.51), rgba(1, 43, 101, 0.4));
+  z-index: 1; /* Asegúrate de que la capa del fondo adicional esté sobre el fondo original */
+}
+
+.register-login .image--points {
+  background-image: linear-gradient(rgba(33, 59, 151, 0.308), rgba(11, 61, 119, 0.411)), url('../img/inicio de sesión/img-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; 
 }
 .register-login-p {
   text-align: center;
