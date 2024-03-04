@@ -1,110 +1,45 @@
-@font-face {
-    font-family: "Gilroy-light";
-    src: url("../Fonts/Gilroy-Light.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Gilroy-Regular";
-    src: url("../Fonts/Gilroy-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Gilroy-Medium";
-    src: url("../Fonts/Gilroy-Medium.ttf");
-}
-
-@font-face {
-    font-family: "Gilroy-Semibold";
-    src: url("../Fonts/Gilroy-SemiBold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Gilroy-Bold";
-    src: url("../Fonts/Gilroy-Bold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Gilroy-Extrabold";
-    src: url("../Fonts/Gilroy-ExtraBold.ttf") format("truetype");
-}
 
 
-@font-face {
-    font-family: "Gilroy-SemiBoldItalic";
-    src: url("../Fonts/Gilroy-SemiBoldItalic.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Gilroy-Thin";
-    src: url("../Fonts/Gilroy-Thin.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Gilroy-RegularItalic";
-    src: url("../Fonts/Gilroy-RegularItalic.ttf") format("truetype");
-}
-
-
-span {
-    font-size: 18px;
-    font-family: "Gilroy-Semibold";
-
+/* Aplica la fuente Raleway a los encabezados h1 hasta h6 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700; 
 }
 
 h1 {
-    font-family: "Gilroy-medium";
-    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
 }
 
 h2 {
-    font-family: "Gilroy-Semibold";
-    font-size: 35px;
-
+   font-family:'Raleway';
+   font-weight: bold;
+   font-size: 50px;
 }
 
 h3 {
-    font-family: "Gilroy-Medium";
-    font-size: 30px;
-}
+    font-family:'Raleway';
+    font-weight: bold;
+    font-size: 34px;
+ }
+   
+
 
 h4 {
-    font-family: "Gilroy-Semibold";
-    font-size: 20px;
-
+    font-family:'Raleway';
+    font-weight: bold;
+    font-size: 28px;
 }
 
 h5 {
-    font-family: "Gilroy-Regular";
-    font-size: 18px;
+    font-family:'Raleway';
+    font-weight: bold;
+    font-size: 24px;
 }
 
 h6 {
-    font-family: "Gilroy-SemiBoldItalic";
-    font-size: 13px;
-}
-
-p {
-    font-family: "Gilroy-Regular";
-    color: #fff;
-   
-
-}
-
-a {
-    font-family: "Gilroy-Medium";
-}
-
-.btn {
-    font-family: "Gilroy-Semibold";
-}
-
-
-
-.button {
-    font-family: "Gilroy-Semibold";
-}
-
-li a {
-    font-family: "Gilroy-medium";
-    font-size: 18px;
+    font-family:'Raleway';
+    font-weight: bold;
+    font-size: 22px;
 }
