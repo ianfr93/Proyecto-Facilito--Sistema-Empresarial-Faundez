@@ -281,6 +281,12 @@ input {
   align-self: center; 
 }
 
+/* Hover */
+.login-button:hover,
+.btn-primary:hover {
+  background-color: #24D366 !important; 
+}
+
 .or-container {
   display: flex;
   align-items: center;
