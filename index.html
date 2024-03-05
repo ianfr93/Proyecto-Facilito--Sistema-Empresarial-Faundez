@@ -46,23 +46,25 @@
                         <div id="carruselTexto" class="carousel slide mt-4" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <h3>Gestiona con Facilito: Siempre Conectados,<br> 
+                                    <h3>Gestiona con Facilito: Siempre Conectados,<br>
                                         Siempre Informados</h3>
-                                    <p> Tu solución integral para gestionar abonados y excepciones de manera eficiente. Accede a información clave con
-                                         facilidad y toma decisiones informadas en un solo lugar</p>
+                                    <p> Tu solución integral para gestionar abonados y excepciones de manera eficiente.
+                                        Accede a información clave con
+                                        facilidad y toma decisiones informadas en un solo lugar</p>
                                 </div>
                                 <div class="carousel-item">
-                                    <h3>Optimiza tus Operaciones con Facilito, <br>
-                                    lo mas avanzado del mercado</h3>
+                                    <h3>Optimiza tus Operaciones con Facilito,
+                                        lo mas avanzado <br> del mercado</h3>
                                     <p>Descubre Facilito, la plataforma que simplifica tu día a día. Gestiona abonados,
-                                        revisa excepciones y busca registros de manera eficiente. Acceso seguro 
+                                        revisa excepciones <br> y busca registros de manera eficiente. Acceso seguro
                                         y fácil</p>
                                 </div>
                                 <div class="carousel-item">
                                     <h3>Facilito: La Solución Integral para tu Negocio, <br>
-                                    Pruebalo ahora mismo</h3>
-                                    <p>Muchas personas ya están utilizando el sistema más moderno del mercado, 
-                                        logrando grandes cambios gracias a los múltiples servicios que nuestra plataforma ofrece.
+                                        Pruebalo ahora mismo</h3>
+                                    <p>Muchas personas ya están utilizando el sistema más moderno del mercado,
+                                        logrando grandes cambios gracias a los múltiples servicios que nuestra
+                                        plataforma ofrece.
                                     </p>
                                 </div>
                             </div>
@@ -76,48 +78,56 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Siguiente</span>
                             </button>
+                            <!-- Indicadores (circulitos) -->
+                            <ol class="carousel-indicators">
+                                <li data-bs-target="#carruselTexto" data-bs-slide-to="0" class="active"></li>
+                                <li data-bs-target="#carruselTexto" data-bs-slide-to="1"></li>
+                                <li data-bs-target="#carruselTexto" data-bs-slide-to="2"></li>
+                            </ol>
+
                         </div>
+
                     </div>
 
                 </div>
             </div>
-           
-      
 
 
-        <!-- lado derecho del login -->
-        <div class="col-lg form-center d-flex justify-content-center align-items-center">
-            <p class="register-login-p">
-                <h1>¡Bienvenido!, por favor ingresa tus credenciales</h1>
-            </p>
-            <form action="./pages/Menu-de-caja.html" method="POST" name="loginForm" id="loginForm">
-                <div class="form-group">
-                    <input type="text" id="username" name="username" class="form-control" required>
-                    <label for="username" class="form-label">Nombre de Usuario</label>
-                </div>
-                <div class="form-group margin--bottom">
-                    <input type="password" id="password" name="password" class="form-control" required>
-                    <label for="password" class="form-label">Contraseña</label>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <div class="d-flex align-items-center">
-                        <input class="form-check-input checked--form--input" type="checkbox" id="remember" value="">
-                        <label class="form-check-label order-2" for="remember">Recuérdame</label>
-                        <label class="label--ckecked order-1" for="remember"></label>
+
+
+            <!-- lado derecho del login -->
+            <div class="col-lg form-center d-flex justify-content-center align-items-center">
+                <p class="register-login-p">
+                    <h1>¡Bienvenido!, por favor ingresa tus credenciales</h1>
+                </p>
+                <form action="./pages/Menu-de-caja.html" method="POST" name="loginForm" id="loginForm">
+                    <div class="form-group">
+                        <input type="text" id="username" name="username" class="form-control" required>
+                        <label for="username" class="form-label">Nombre de Usuario</label>
                     </div>
-                    <a href="#" class="forgot__password--link">¿Olvidó su contraseña?</a>
-                </div>
-                <div class="d-flex justify-content-lg-between">
-                    <!-- Cambia el tipo de botón de "button" a "submit" y agrega el atributo "form" -->
-                    <button type="submit" class="btn btn-login align-self-center" onclick="autenticarUsuario(event)"
-                        id="acceso">Entrar</button>
+                    <div class="form-group margin--bottom">
+                        <input type="password" id="password" name="password" class="form-control" required>
+                        <label for="password" class="form-label">Contraseña</label>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <input class="form-check-input checked--form--input" type="checkbox" id="remember" value="">
+                            <label class="form-check-label order-2" for="remember">Recuérdame</label>
+                            <label class="label--ckecked order-1" for="remember"></label>
+                        </div>
+                        <a href="#" class="forgot__password--link">¿Olvidó su contraseña?</a>
+                    </div>
+                    <div class="d-flex justify-content-lg-between">
+                        <!-- Cambia el tipo de botón de "button" a "submit" y agrega el atributo "form" -->
+                        <button type="submit" class="btn btn-login align-self-center" onclick="autenticarUsuario(event)"
+                            id="acceso">Entrar</button>
 
-                </div>
+                    </div>
 
-                <a href="#" class="register-link--haveaccount">¿No tienes una cuenta? Registrate</a>
-            </form>
+                    <a href="#" class="register-link--haveaccount">¿No tienes una cuenta? Registrate</a>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
 
     </div>
