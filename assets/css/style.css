@@ -369,6 +369,10 @@ p {
 /* Estilos adicionales para la nueva estructura */
 .abonados {
   margin: 0; /* Ajusta el margen del título Abonados */
+  color:#012B65 !important; 
+  font-size: 30px;
+  margin-left: 30px;
+
 }
 
 .container-abajo {
@@ -377,6 +381,9 @@ p {
 
 .btn-primary {
   margin-top: 10px; /* Ajusta el espacio sobre el botón Cerrar Sesión en versiones mobile */
+ background-color: #012B65;
+ width: 171px;
+ height: 48px;
 }
 
 
