@@ -366,11 +366,19 @@ p {
   left: 0;
 }
 /* Comienza Estilos para la pantalla de abonados */
-.titulo-abonados {
-  color: #1C4273; 
-  font-size: 30px; 
-  margin-top: 30px;
+/* Estilos adicionales para la nueva estructura */
+.abonados {
+  margin: 0; /* Ajusta el margen del título Abonados */
 }
+
+.container-abajo {
+  padding: 10px; /* Ajusta el espacio dentro del contenedor en versiones mobile */
+}
+
+.btn-primary {
+  margin-top: 10px; /* Ajusta el espacio sobre el botón Cerrar Sesión en versiones mobile */
+}
+
 
 
 /* Para pantallas mayores o iguales a 1500px */
@@ -396,7 +404,23 @@ p {
     margin-top: 50px;
   }
 }
+@media (max-width: 767.98px) {
 
+
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (min-width: 768px) {
+  .table-responsive {
+    display: table;
+    width: auto;
+  }
+}
 /* Para pantallas menores o iguales a 480px */
 @media screen and (max-width: 480px) {
 
