@@ -93,20 +93,21 @@
             </div>
 
             <!-- Lado derecho del login -->
-            <div class="col-lg bg-form-container mx-auto" style="margin-top: -10px;">
+            <div class="col-lg bg-form-container mx-auto" style="margin-top: -10px; max-width: 100%;">
                 <h1 class="titulo-inicio">Registrarse</h1>
+            
 
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" class="form-control" required>
-                    <span id="nombreError" class="error-message" style="color: red; font-weight: 300;"></span>
+                    <span id="nombreError" class="error-message" style="color: red; font-weight: 300;font-size: 10px;"></span>
 
                 </div>
 
                 <div class="form-group">
                     <label for="username">Nombre de Usuario</label>
                     <input type="text" id="username" name="username" class="form-control" required>
-                    <span id="usernameError" class="error-message" style="color: red; font-weight: 300;"></span>
+                    <span id="usernameError" class="error-message" style="color: red; font-weight: 300;font-size: 10px;"></span>
                 </div>
 
                 <div class="form-group">
@@ -117,7 +118,7 @@
                             <i class="fas fa-eye" style="color: #012B65;"></i>
                         </span>
                     </div>
-                    <span id="passwordError" class="error-message" style="color: red; font-weight: 300;"></span>
+                    <span id="passwordError" class="error-message" style="color: red; font-weight: 300;font-size: 10px;"></span>
                     <div class="form-group">
                         <label for="confirmPassword">Confirmar Contraseña</label>
                         <div class="input-group">
@@ -134,15 +135,19 @@
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" class="form-control" required>
-                        <span id="emailError" class="error-message" style="color: red; font-weight: 300;"></span>
+                        <span id="emailError" class="error-message" style="color: red; font-weight: 300;font-size: 10px;"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="confirmEmail">Confirmar Email</label>
                         <input type="email" id="confirmEmail" name="confirmEmail" class="form-control" required>
-                        <span id="confirmEmailError" class="error-message" style="color: red; font-weight: 300;"></span>
+                        <span id="confirmEmailError" class="error-message" style="color: red; font-weight: 300; font-size: 10px;"></span>
+                      
 
-                        <button class="btn btn-primary login-button" onclick="validateForm()">Registro</button>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-primary login-button" onclick="validateForm()">Registro</button>
+                        </div>
+                        
 
                         <div class="or-container" style="margin-top: 13px; margin-bottom: 20px;">
                             <hr class="or-line">
