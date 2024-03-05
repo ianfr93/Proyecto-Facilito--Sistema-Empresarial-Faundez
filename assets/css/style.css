@@ -84,6 +84,51 @@ html, body {
   margin-top: 120px; /* Ajusta la nueva separación hacia abajo */
 }
 
+/* Estilo para el carrusel de texto */
+#carruselTexto {
+  width: 100%; /* Ajusta el ancho según sea necesario */
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+/* Estilo para los elementos del carrusel */
+#carruselTexto .carousel-inner {
+  text-align: center; /* Centra el texto en el carrusel */
+  z-index: 2;
+}
+
+#carruselTexto h3 {
+  font-size: 24px; /* Ajusta el tamaño del título */
+  color: #ffffff; /* Color del texto del título */
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin-left:80px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+#carruselTexto p {
+  font-size: 20px; /* Ajusta el tamaño del párrafo */
+  color: #ffffff; /* Color del texto del párrafo */
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin-left: 80px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+/* Estilo para los controles del carrusel */
+#carruselTexto .carousel-control-prev,
+#carruselTexto .carousel-control-next {
+  color: #2C5D70; /* Color de los controles del carrusel */
+  font-size: 2rem; /* Ajusta el tamaño de los controles del carrusel */
+}
+
+/* Estilo para el ícono de los controles del carrusel */
+#carruselTexto .carousel-control-prev-icon,
+#carruselTexto .carousel-control-next-icon {
+  background-color: #2C5D70; /* Color de fondo del ícono de los controles del carrusel */
+  border-radius: 50%; /* Borde redondeado para el ícono de los controles del carrusel */
+}
+
+/* Estilo para la posición activa del carrusel */
+#carruselTexto .carousel-indicators .active {
+  background-color: #2C5D70; /* Color de fondo de la posición activa del carrusel */
+}
+
 .register-login-p {
   text-align: center;
   font-size: 18px;
