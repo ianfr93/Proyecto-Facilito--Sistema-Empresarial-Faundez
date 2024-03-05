@@ -15,8 +15,8 @@
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- estilos -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
     <!-- Enlace a la fuente Raleway desde Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
 
@@ -37,9 +37,9 @@
                 <div class="container__image">
                     <div class="image--points">
                         <!-- Colocar el logo dentro de la capa del fondo -->
-                        <img src="./assets/img/logo/facilito-logo-2.png" alt="Logo de Facilito">
+                        <img src="../assets/img/logo/facilito-logo-2.png" alt="Logo de Facilito">
 
-                        <img src="./assets/img/inicio de sesión/imagen-login-clientes.png" alt="Tu Nueva Imagen"
+                        <img src="../assets/img/inicio de sesión/imagen-login-clientes.png" alt="Tu Nueva Imagen"
                             class="centro">
 
                         <!-- Carrusel de solo texto -->
@@ -98,13 +98,17 @@
             <!-- lado derecho del login -->
 
             <div class="col-lg bg-form-container">
-                <h1 class="titulo-inicio">Iniciar Sesión</h1>
+                <h1 class="titulo-inicio">Registrarse</h1>
 
-                <p class="register-link">¿No tienes una cuenta? <a href="#" class="marked-link">Regístrate ahora"</a>
-                </p>
+              
 
                 <div class="form-group">
-                    <label for="username">Usuario</label>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Nombre de Usuario</label>
                     <input type="text" id="username" name="username" class="form-control" required>
                 </div>
 
@@ -118,13 +122,28 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Contraseña</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="confirmEmail">Confirmar Email</label>
+                    <input type="email" id="confirmEmail" name="confirmEmail" class="form-control" required>
+                </div>
+
                 <div class="form-group form-check remember-me">
                     <input type="checkbox" id="rememberMe" name="rememberMe" class="form-check-input">
                     <label for="rememberMe" class="form-check-label">Recuérdame</label>
                     <a href="#" class="forgot-password">¿Olvidó su contraseña?</a>
                 </div>
 
-                <button class="btn btn-primary login-button">Ingresar</button>
+                <button class="btn btn-primary login-button">Registro</button>
 
                 <div class="or-container">
                     <hr class="or-line">
@@ -132,12 +151,10 @@
                     <hr class="or-line-2">
                   </div>
 
-                <p class="visit-site">Visitar Sitio Web</p>
+                <p class="visit-site">Cancelar</p>
 
                 <div class="footer">
-                    <p class="footer-text">
-                        <a href="https://www.facele.cl" target="_blank" class="footer-link">Facele-Chile</a>
-                      </p>
+                    
                     <p class="footer-text-ver">Version-2.0.0.90</p>
                 </div>
             </div>
