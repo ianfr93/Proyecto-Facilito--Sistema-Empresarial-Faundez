@@ -6,23 +6,50 @@ function validateForm() {
   var email = document.getElementById('email').value;
   var confirmEmail = document.getElementById('confirmEmail').value;
 
-  if (!nombre || !username || !password || !confirmPassword || !email || !confirmEmail) {
-      alert('Por favor, completa todos los campos.');
+  resetErrorMessages(); // Reiniciar mensajes de error
+
+  if (!nombre) {
+      document.getElementById('nombreError').innerText = 'Por favor, ingresa tu nombre.';
+  }
+
+  if (!username) {
+      document.getElementById('usernameError').innerText = 'Por favor, ingresa tu nombre de usuario.';
+  }
+
+  if (!password) {
+      document.getElementById('passwordError').innerText = 'Por favor, ingresa tu contraseña.';
+  }
+
+  if (!confirmPassword) {
+      document.getElementById('confirmPasswordError').innerText = 'Por favor, confirma tu contraseña.';
+  }
+
+  if (!email) {
+      document.getElementById('emailError').innerText = 'Por favor, ingresa tu dirección de correo electrónico.';
+  }
+
+  if (!confirmEmail) {
+      document.getElementById('confirmEmailError').innerText = 'Por favor, confirma tu dirección de correo electrónico.';
+  }
+
+  // Resto de las validaciones
+
+  // Si hay algún mensaje de error, detener el proceso
+  if (document.querySelector('.error-message').innerText) {
       return;
   }
 
-  // Aquí puedes agregar más validaciones según tus requisitos
-
+  // Aquí puedes agregar la lógica para enviar los datos al servidor o hacer otras acciones
   alert('Registro exitoso!');
-  // Aquí podrías agregar la lógica para enviar los datos al servidor o hacer otras acciones
 }
 
-  // Agregar evento de clic al botón con id "acceso"
-document.getElementById("acceso").addEventListener("click", function(event) {
-  if (intentosRestantes > 0) {
-    autenticarUsuario(event);
-  }
-});
+function resetErrorMessages() {
+  // Reiniciar todos los mensajes de error
+  var errorMessages = document.querySelectorAll('.error-message');
+  errorMessages.forEach(function (element) {
+      element.innerText = '';
+  });
+}
 
 function togglePassword() {
   const passwordInput = document.getElementById("password");
