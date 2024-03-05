@@ -6,7 +6,7 @@ function validateForm() {
   var email = document.getElementById('email').value;
   var confirmEmail = document.getElementById('confirmEmail').value;
 
-  resetErrorMessages(); // Reiniciar mensajes de error
+  resetErrorMessages(); 
 
   if (!nombre) {
       document.getElementById('nombreError').innerText = 'Por favor, ingresa tu nombre.';
@@ -32,7 +32,7 @@ function validateForm() {
       document.getElementById('confirmEmailError').innerText = 'Por favor, confirma tu dirección de correo electrónico.';
   }
 
-  // Resto de las validaciones
+
 
   // Si hay algún mensaje de error, detener el proceso
   if (document.querySelector('.error-message').innerText) {
@@ -50,7 +50,8 @@ function resetErrorMessages() {
       element.innerText = '';
   });
 }
-
+  
+// aca es para el icono del ojo en los campos de contraseña para activar y desactivar
 function togglePassword() {
   const passwordInput = document.getElementById("password");
   const eyeIcon = document.querySelector(".password-toggle i");
