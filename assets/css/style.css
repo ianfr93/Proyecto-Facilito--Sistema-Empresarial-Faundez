@@ -61,6 +61,29 @@ html, body {
   left: 0;
   z-index: 0; 
 }
+
+.container__image {
+  position: relative;
+  height: 100vh;
+
+}
+.image--points img {
+  width: 271px; /* Ajusta el tamaño del logo según tus necesidades */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centrar el logo dentro de la capa */
+  margin-top: 60px;
+  position: relative; /* Agrega esta línea para asegurar que el logo esté encima del fondo */
+  z-index: 2; /* Ajusta el z-index para que el logo esté encima del fondo */
+}
+
+.image--points .centro  {
+  width: 570px; /* Ajusta el tamaño de la nueva imagen según tus necesidades */
+  height: auto;
+  display: block;
+  margin-top: 120px; /* Ajusta la nueva separación hacia abajo */
+}
+
 .register-login-p {
   text-align: center;
   font-size: 18px;
