@@ -365,7 +365,12 @@ p {
   bottom: 0;
   left: 0;
 }
-
+/* Comienza Estilos para la pantalla de abonados */
+.titulo-abonados {
+  color: #1C4273; 
+  font-size: 30px; 
+  margin-top: 30px;
+}
 
 
 /* Para pantallas mayores o iguales a 1500px */
