@@ -366,26 +366,57 @@ p {
   left: 0;
 }
 /* Comienza Estilos para la pantalla de abonados */
-/* Estilos adicionales para la nueva estructura */
+
 .abonados {
-  margin: 0; /* Ajusta el margen del título Abonados */
+  margin: 0; 
   color:#012B65 !important; 
   font-size: 30px;
   margin-left: 30px;
+  margin-top: 20px;
 
 }
 
+.icono-usuario {
+  width: 50px;
+  height: 50px;
+  margin-right: 110px;
+ 
+}
 .container-abajo {
-  padding: 10px; /* Ajusta el espacio dentro del contenedor en versiones mobile */
+  padding: 10px; 
+}
+.separar-botones {
+  margin-left: 50px; 
+  
+    margin-top: 5px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.logo-img-2 {
+
+  height: auto; 
+  margin: 20px auto 0; 
+  margin-left: 230px;
 }
 
-.btn-primary {
-  margin-top: 10px; /* Ajusta el espacio sobre el botón Cerrar Sesión en versiones mobile */
- background-color: #012B65;
- width: 171px;
- height: 48px;
+
+.btn-secondary {
+  margin-top: 10px; 
+  background-color: #012B65;
+  width: 171px;
+  height: 48px;
+  margin-right: 30px;
+  color: #fff;
+  border: none; 
 }
 
+/* Cambio de color al pasar el ratón sobre el botón */
+.btn-secondary:hover {
+  background-color: #24D366 !important; /* Cambia este valor al color verde que desees (#00ff00 es verde puro) */
+}
 
 
 /* Para pantallas mayores o iguales a 1500px */
@@ -411,6 +442,46 @@ p {
     margin-top: 50px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .btn-secondary {
+    margin-top: -50px;
+    width: 131px;
+    height: 44px;
+    margin-right: 30px;
+  }
+
+  .icono-usuario {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px; /* Ajusta este valor según tus necesidades */
+  }
+
+  .separar-botones {
+    margin-left: 50px;
+  }
+
+  .logo-img-2 {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .register-login .container__image {
+    min-height: 200px;
+    height: 200px; 
+  }
+
+  .titulo-inicio, h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+  }
+
+  .table-responsive {
+    display: table;
+    width: auto;
+  }
+}
 @media (max-width: 767.98px) {
 
 
@@ -422,12 +493,6 @@ p {
   }
 }
 
-@media (min-width: 768px) {
-  .table-responsive {
-    display: table;
-    width: auto;
-  }
-}
 /* Para pantallas menores o iguales a 480px */
 @media screen and (max-width: 480px) {
 
