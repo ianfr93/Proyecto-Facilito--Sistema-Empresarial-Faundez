@@ -242,6 +242,14 @@ input {
   border: none; 
 }
 
+.form-check-input:hover {
+ color: #ffffff !important;
+}
+.form-check-input:hover {
+  background-color:#012B65!important;
+  color: #fff !important;
+  border: 1px solid #012B65!important;
+}
 .form-check-label {
   margin-left: 20px;
   margin-right: 0px;
@@ -258,7 +266,7 @@ input {
 
 .forgot-password {
   margin-left: auto;
-  color: #012B65;
+  color: #012B65!important;
   text-decoration: none;
   margin-top: 12px; 
   font-weight: 400;
@@ -281,7 +289,7 @@ input {
   align-self: center; 
 }
 
-/* Hover */
+
 .login-button:hover,
 .btn-primary:hover {
   background-color: #24D366 !important; 
