@@ -141,7 +141,7 @@ html, body {
   left: 50%; 
   margin: 0 auto;
   z-index: 2; 
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 /* Estilo para la posición activa del carrusel */
@@ -149,7 +149,7 @@ html, body {
   background-color: #ffffff; 
   z-index: 2;
 }
-/* Los demás estilos se mantienen igual */
+
 #carruselTexto .carousel-indicators li {
   background-color: #CBD5E0; 
   border: 1px solid #555; 
@@ -170,41 +170,61 @@ html, body {
 #carruselTexto .carousel-indicators li {
   color: transparent; 
 }
+/* Añade estos estilos al final de tu archivo style.css */
 
+/* Estilos para el lado derecho del formulario de inicio de sesión */
 .bg-form-container {
-  background-color: #f4f4f4; /* Cambia esto al color de fondo deseado */
+  background-color: #ffffff;
   padding: 40px;
-  border-left: 1px solid #ccc; /* Añade un borde izquierdo para separar del lado izquierdo */
+  border-left: 1px solid #ccc;
+  max-width: 100%;
+  height: 100vh; /* Ajusta el alto para llenar la pantalla verticalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.granade {
-  color: #BF1E2E; /* Color granate, ajusta según sea necesario */
+.titulo-inicio {
+  color: #012B65;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 50px;
 }
 
-.register-link {
-  margin-top: 20px;
+.register-link, p {
+  color: #718096;
+  margin-top: 80px;
+  font-size: 18px;
+  margin-left: 0px; 
+  margin-right: 20px; 
 }
 
 .marked-link {
-  color: #BF1E2E; /* Color granate para el enlace marcado */
+  color: #012B65; 
   text-decoration: none;
   font-weight: bold;
+  font-size: 18px;
+  margin-left: 270px; 
+  margin-right: 0px; 
+  max-width: 100%;
 }
 
 .form-group {
-  margin-top: 20px;
+  margin-top: 20px; /* Ajusta el margen superior */
 }
 
 label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 8px; 
   font-weight: bold;
+  font-size: 18px; 
 }
 
 input {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
+  margin-top: 8px; 
 }
 
 .password-container {
@@ -215,52 +235,115 @@ input {
   position: absolute;
   right: 10px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-35%);
   cursor: pointer;
+  background-color: transparent;
+  border: none; 
+}
+
+.form-check-label {
+  margin-left: 20px;
+  margin-right: 0px;
+  margin-top: 12px; 
+  color: #718096;
+  font-weight: 300;
 }
 
 .remember-me {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 8px; /* Reduce el margen superior */
 }
 
 .forgot-password {
   margin-left: auto;
-  color: #BF1E2E; /* Color granate para el enlace de contraseña olvidada */
+  color: #012B65;
   text-decoration: none;
+  margin-top: 12px; /* Ajusta el margen superior */
+  font-weight: 400;
 }
 
 .login-button {
-  background-color: #007BFF; /* Color azul para el botón */
+  background-color: #033F63;
   color: #fff;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
   margin-top: 20px;
+  align-self: center; /* Centra horizontalmente */
 }
 
-.login-button:hover {
-  background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
+.btn-primary {
+  margin-top: 20px;
+  display: block;
+  width: 265px;
+  align-self: center; /* Centra horizontalmente */
 }
 
-.or-line {
+.or-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: 20px 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para las líneas horizontales */
+.or-line,
+.or-line-2 {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ABAEB0;
+  margin: 0 10px;
+}
+
+/* Estilos para el texto "or" */
+.or-text {
+  color: #012B65;
+  font-size: 18px;
+  padding: 0 10px;
+  font-weight: 500;
 }
 
 .visit-site {
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 12px; /* Ajusta el margen superior */
+  color: #012B65;
+  font-size: 16px; /* Ajusta el tamaño del texto */
 }
 
 .footer {
   text-align: center;
 }
 
-.footer-text {
-  margin: 5px 0;
+.footer-text,
+.footer-text-ver,
+p {
+  margin-top: 20px; /* Ajusta el margen superior */
+  color: #012B65;
+  font-size: 16px; /* Ajusta el tamaño del texto */
 }
+
+/* Estilo para el enlace del pie de página */
+.footer-link {
+  color: #012B65;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Pseudo-elemento para la línea debajo del enlace al hacer hover */
+.footer-link:hover::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #012B65;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 
 
 @media screen and (min-width: 1400px) {
