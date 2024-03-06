@@ -581,7 +581,7 @@ p {
   .btn2 a.btn-secondary {
     width: 100px;
     height: 32px;
-    font-size: 11px;
+    font-size: 10px;
     text-align: center;
     line-height: 1.5;
     margin: 15px auto 0;
@@ -595,8 +595,9 @@ p {
   /* Muestra el botón de hamburguesa y oculta la barra de navegación principal */
   .navbar-toggler {
     display: block;
-    border-color: #ffffff !important; /* Añade el cambio de color a blanco para las tres rayas */
-  }
+    border-color: #ffffff !important; /* Cambia el color del borde a blanco para las tres rayas */
+    background-color: #ffffff !important; /* Cambia el color de fondo a tu color deseado */
+}
 
   .navbar-collapse {
     display: none;
