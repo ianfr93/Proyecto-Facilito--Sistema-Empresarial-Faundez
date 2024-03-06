@@ -30,63 +30,104 @@
 
 <body>
     <header>
-    <nav class="navbar navbar-expand-md" style="background-color: #012B65;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="javascript:void(0)">
-                <img class="logo-img-2 fixed-logo" src="../assets/img/logo/facilito-logo-2.png" alt="Logo" style="max-height: 40px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav me-auto mb-2 mb-sm-0 left-links">
-                    <!-- Enlace "Abonados" con tu propio icono -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="../assets/img/iconos/abonados-1.png" style="margin-left: 16px;" alt="Icono Abonados" width="20" height="20">
-                            <span class="first-span">Abonados</span>
-                        </a>
-                    </li>
-                    <!-- Enlace "Excepciones" con tu propio icono -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="../assets/img/iconos/excepciones-1.png" alt="Icono Excepciones" width="20" height="20">
-                            <span class="second-span">Excepciones</span>
-                        </a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-md" style="background-color: #012B65;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="javascript:void(0)">
+                    <img class="logo-img-2 fixed-logo" src="../assets/img/logo/facilito-logo-2.png" alt="Logo"
+                        style="max-height: 40px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-sm-0 left-links">
+                        <!-- Enlace "Abonados" con tu propio icono -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../assets/img/iconos/abonados-1.png" style="margin-left: 16px;"
+                                    alt="Icono Abonados" width="20" height="20">
+                                <span class="first-span">Abonados</span>
+                            </a>
+                        </li>
+                        <!-- Enlace "Excepciones" con tu propio icono -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../assets/img/iconos/excepciones-1.png" alt="Icono Excepciones" width="20"
+                                    height="20">
+                                <span class="second-span">Excepciones</span>
+                            </a>
+                        </li>
+                    </ul>
 
-                <!-- Menú de usuario dropdown y botón Cerrar Sesión a la derecha -->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../assets/img/iconos/Status=None, Size=24px, Presence=None.png"
-                                alt="Icono Usuario" style="width: 50px; height: 50px;"> <span>Usuario</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                                <a class="dropdown-item custom-dropdown-item" href="#">
-                                    <i class="fas fa-user"></i> Ver mi perfil
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <div class="btn2">
-                        <a href="../index.html" class="btn btn-secondary  d-md-block separar-botones">Cerrar Sesión</a>
-                    </div>
-                </ul>
+                    <!-- Menú de usuario dropdown y botón Cerrar Sesión a la derecha -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/img/iconos/Status=None, Size=24px, Presence=None.png"
+                                    alt="Icono Usuario" style="width: 50px; height: 50px;"> <span>Usuario</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item custom-dropdown-item" href="#">
+                                        <i class="fas fa-user"></i> Ver mi perfil
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <div class="btn2">
+                            <a href="../index.html" class="btn btn-secondary  d-md-block separar-botones">Cerrar
+                                Sesión</a>
+                        </div>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h1>Abonados</h1>
+                <div class="titulo-abonados">
+                    <h1>Abonados</h1>
+                </div>
             </div>
         </div>
+
+
+
+
+
+        <div class="container filtrar-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="identification" class="form-label">
+                        <span contenteditable="true">Identificación</span>
+                    </label>
+                    <select id="identification" name="identification" class="form-select">
+                        <option value="Rut-empresa"><span>Rut Empresa</span></option>
+                        <option value="otro"><span>Otro</span></option>
+                    </select>
+                </div>
+    
+                <div class="col-md-4">
+                    <label for="status" class="form-label">
+                        <span contenteditable="true">Estado</span>
+                    </label>
+                    <select id="status" name="status" class="form-select">
+                        <option value="activo">Activo</option>
+                        <option value="inactivo">Inactivo</option>
+                        <option value="migracion">Migración</option>
+                    </select>
+                </div>
+    
+                <div class="col-md-4 text-md-end">
+                    <button type="button" class="btn-tertiary">buscar</button>
+                </div>
+            </div>
+        </div>
+
+
         <div class="row">
             <div class="col-12">
                 <table class="table table-striped table-bordered">
@@ -148,21 +189,7 @@
                             <td>Cescal Brand S.A</td>
                             <td>inactivo</td>
                         </tr>
-                        <tr>
-                            <td>76217478-3</td>
-                            <td>Cescal Brand S.A</td>
-                            <td>inactivo</td>
-                        </tr>
-                        <tr>
-                            <td>76217478-3</td>
-                            <td>Cescal Brand S.A</td>
-                            <td>inactivo</td>
-                        </tr>
-                        <tr>
-                            <td>76217478-3</td>
-                            <td>Cescal Brand S.A</td>
-                            <td>inactivo</td>
-                        </tr>
+
 
                         <!-- Add more rows as needed -->
                     </tbody>
