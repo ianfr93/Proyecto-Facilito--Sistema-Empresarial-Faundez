@@ -455,6 +455,34 @@ p {
 }
 
 
+.navbar-nav.me-auto.mb-2.mb-sm-0.left-links .nav-item a.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav.me-auto.mb-2.mb-sm-0.left-links .nav-item a.nav-link:hover {
+  color: #00DEFF;
+}
+
+/* Efecto de subrayado en el hover */
+.navbar-nav.me-auto.mb-2.mb-sm-0.left-links .nav-item a.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #00DEFF;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0); /* Inicialmente sin ancho */
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav.me-auto.mb-2.mb-sm-0.left-links .nav-item a.nav-link:hover::after {
+  transform: scaleX(1); /* Añade el ancho en el hover */
+  transform-origin: bottom left;
+}
+
 
 /* Para pantallas mayores o iguales a 1500px */
 @media screen and (min-width: 1500px) {
@@ -585,50 +613,39 @@ p {
   }
 }
 
-/* Para pantallas menores o iguales a 480px */
 @media screen and (max-width: 480px) {
-
-     /* Muestra el botón de hamburguesa y oculta la barra de navegación principal */
-     .navbar-toggler {
-      display: block;
+  /* Muestra el botón de hamburguesa y oculta la barra de navegación principal */
+  .navbar-toggler {
+    display: block;
   }
-  .navbar-nav.ms-auto .nav-item.dropdown {
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    transform: translateX(-140px);
-}
-.navbar-nav{
- text-align: center;
-}
-.dropdown-item {
-  width: 100%;
-  max-width: 200px; /* Ajusta el ancho máximo según sea necesario */
-}
 
-
-
-  /* Estilo del menú desplegable */
   .navbar-collapse {
-      display: flex;
-      flex-direction: column;
-      background-color: #fff; /* Ajusta el color de fondo según tu diseño */
-      padding: 15px; /* Ajusta el relleno según sea necesario */
-      position: absolute;
-      top: 60px; /* Ajusta la posición según sea necesario */
-      width: 100%;
-      z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    z-index: 1;
   }
 
-  /* Estilo de los elementos del menú desplegable */
   .navbar-collapse a {
-      margin: 10px 0;
-      font-size: 18px; /* Ajusta el tamaño de fuente según sea necesario */
-      color: #333; /* Cambia el color del texto según tu diseño */
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
   }
 
+  .navbar-nav.ms-auto .nav-item.dropdown {
+    text-align: center;
+  }
 
-
+  .dropdown-item {
+    width: 100%;
+    max-width: 200px;
+  }
 
   .titulo-inicio,
   h1 {
@@ -640,16 +657,17 @@ p {
   .btn-primary {
     margin-top: 20px;
   }
+
   .btn2 {
     text-align: center;
     align-items: center;
-    margin: 15px auto 0; /* Ajusta el margen superior según sea necesario */
-  transform: translateX(-140px);
-}
-    /* Estilo del botón en el menú desplegable */
-    .btn2 a.btn-secondary {
-margin-top: -10px;
-      color: #ffffff;
+    margin: 15px auto 0;
+  }
+
+  /* Estilo del botón en el menú desplegable */
+  .btn2 a.btn-secondary {
+    color: #ffffff;
+    margin-top: -10px;
   }
 }
 

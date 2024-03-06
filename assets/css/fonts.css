@@ -39,7 +39,7 @@ h5 {
 h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 
@@ -47,4 +47,12 @@ p {
     font-family: 'Raleway', sans-serif;
     font-weight: 400; 
     font-size: 24px;
+}
+
+span{
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800; 
+    font-size: 20px;
+    color:#012B65 ;
 }
