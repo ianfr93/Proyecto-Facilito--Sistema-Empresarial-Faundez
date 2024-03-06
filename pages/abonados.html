@@ -29,17 +29,35 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="javascript:void(0)">
-                <img class="logo-img-2" src="../assets/img/logo/facilito-logo-1.png" alt="Logo" style="max-height: 40px;">
+                <img class="logo-img-2 fixed-logo" src="../assets/img/logo/facilito-logo-1.png" alt="Logo" style="max-height: 40px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
-                <!-- Menú de usuario dropdown -->
-                <ul class="navbar-nav">
+                <!-- Enlaces de navegación a la izquierda -->
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0 left-links">
+                    <!-- Enlace "Abonados" con tu propio icono -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="../assets/img/iconos/abonados.png" alt="Icono Abonados" style="width: 20px; height: 20px;">
+                            Abonados
+                        </a>
+                    </li>
+                    <!-- Enlace "Excepciones" con tu propio icono -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="../assets/img/iconos/excepciones.png" alt="Icono Excepciones" style="width: 20px; height: 20px;">
+                            Excepciones
+                        </a>
+                    </li>
+                </ul>
+    
+                <!-- Menú de usuario dropdown y botón Cerrar Sesión a la derecha -->
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,96 +68,20 @@
                             <li><a class="dropdown-item" href="#">Ver mi perfil</a></li>
                         </ul>
                     </li>
-                </ul>
-                <!-- Botón Cerrar Sesión -->
-                <div class="ms-auto">
                     <div class="btn2">
-                        <a href="../index.html"
-                            class="btn btn-secondary d-none d-md-block separar-botones">Cerrar Sesión</a>
+                        <a href="../index.html" class="btn btn-secondary  d-md-block separar-botones">Cerrar Sesión</a>
                     </div>
-                </div>
+                </ul>
             </div>
         </div>
     </nav>
     
+    
+    
+    
 
 
-    <!-- Header -->
-    <header>
-        <!-- Start Top Nav - Desktop -->
-        <nav class="navbar navbar-expand-lg navbar-light d-none d-md-block" id="navbar-1_nav_top">
-            <div class="container-arriba text-light">
-                <div class="w-100 d-flex justify-content-between">
-
-                    <!-- Logo de la marca -->
-                    <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-                        <img class="logo-img-2" src="../assets/img/logo/facilito-logo-1.png" alt="Logo"
-                            style="max-height: 40px;">
-                    </a>
-                    <!-- Menú de usuario dropdown -->
-                    <div class="dropdown-1">
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="../assets/img/iconos/Status=None, Size=24px, Presence=None.png"
-                                        alt="Icono Usuario" style="width: 50px; height: 50px;"> Usuario
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Ver mi perfil</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-
-                    </div>
-                    <!-- Botón Cerrar Sesión -->
-                    <div class="btn2">
-                        <a href="../index.html" class="btn btn-secondary d-none d-md-block separar-botones">Cerrar
-                            Sesión</a>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </nav>
-
-        <!-- Diseño para versiones tablet y mobile -->
-        <nav class="navbar navbar-expand-md navbar-light shadow">
-            <div class="container-abajo d-flex justify-content-between align-items-center">
-                <!-- Logo visible solo en modo responsive -->
-                <a class="navbar-brand text-success logo h1 align-self-center d-md-none" href="index.html">
-                    <img src="./assets/images/logos/logo-nav.png" alt="Logo" style="max-height: 50px;">
-                </a>
-                <!-- Botón de hamburguesa -->
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbar-1_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Menú de hamburguesa -->
-                <div class="collapse navbar-collapse" id="navbar-1_main_nav">
-                    <ul class="navbar-nav">
-                        <!-- Perfil dropdown -->
-                        <li class="nav-item dropdown d-md-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="mobileNavbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-user"></i> Nombre de Usuario
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="mobileNavbarDropdown">
-                                <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Ver mi perfil</a></li>
-                            </ul>
-                        </li>
-                        <!-- Botón Cerrar Sesión -->
-                        <li class="nav-item d-md-none">
-                            <button class="btn btn-primary">Cerrar Sesión</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Close Header -->
-
+    
 
 
 
