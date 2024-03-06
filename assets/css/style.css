@@ -593,6 +593,41 @@ p {
 
 @media screen and (max-width: 767px) {
 
+  /* Muestra el botón de hamburguesa y oculta la barra de navegación principal */
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none; /* Asegura que el menú desplegable esté oculto inicialmente */
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(6, 15, 49, 0.705), rgba(7, 37, 72, 0.754)), url('../img/inicio de sesión/img-1.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15px;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .navbar-collapse a {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  /* Resto de tus estilos ... */
+
+  /* Añade el siguiente código para mostrar/ocultar el menú desplegable */
+  .navbar-toggler:focus + .navbar-collapse,
+  .navbar-collapse.show {
+    display: flex;
+  }
+
   
   .navbar-nav.ms-auto {
     margin-left: auto;
