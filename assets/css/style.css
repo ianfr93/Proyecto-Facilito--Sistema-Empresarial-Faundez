@@ -551,8 +551,9 @@ p {
 .custom-dropdown-item i {
   color: #ffffff !important;
 }
-.titulo-abonados{
-  margin-top: 20px;
+.titulo-abonados h1 {
+  text-align: left;
+margin-top: 20px;
 }
 
 .form-label span {
@@ -585,6 +586,11 @@ font-weight: 400;
 
 }
 
+.filtrar-container .form-label label {
+  background-color:transparent !important;
+  
+
+}
 .filtrar-container .form-select {
 
   width: 100%; 
