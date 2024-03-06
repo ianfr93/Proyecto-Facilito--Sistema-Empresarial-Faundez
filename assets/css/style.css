@@ -365,7 +365,6 @@ p {
   position: relative;
 }
 
-/* Pseudo-elemento para la línea debajo del enlace al hacer hover */
 .footer-link:hover::after {
   content: '';
   display: block;
@@ -379,7 +378,7 @@ p {
 
 /* Comienza Estilos para la pantalla de abonados */
 .navbar {
-  background-image: linear-gradient(rgba(6, 15, 49, 0.705), rgba(7, 37, 72, 0.754)), url('../img/inicio de sesión/fondo-5.jpg');
+  background-image: linear-gradient(rgba(6, 15, 49, 0.815), rgba(7, 37, 72, 0.825)), url('../img/inicio de sesión/fondo-5.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -389,16 +388,14 @@ p {
 .fixed-logo {
   position: absolute;
   left: 15px;
-  /* Ajusta la distancia desde el borde izquierdo según tus necesidades */
   top: 50%;
-  /* Centra verticalmente el logo en relación con la altura de la barra de navegación */
   transform: translateY(-50%);
 }
 
 /* Ajuste para el contenido restante */
 .container-fluid {
   padding-left: 10px;
-  /* Ajusta la distancia según sea necesario para dar espacio al logo */
+ 
 }
 
 .abonados {
@@ -432,8 +429,6 @@ p {
   border-radius: 5px;
 }
 
-
-
 .btn-secondary {
   margin-top: 10px;
   width: 171px;
@@ -444,16 +439,16 @@ p {
   background: linear-gradient(to bottom, #18355c, #012B65); /* Agrega el gradiente como fondo */
 }
 .dropdown-item::before {
-  content: '\25BC'!important; /* Código de la flecha hacia abajo */
+  content: '\25BC'!important; 
   display: inline-block;
-  margin-right: 0.5em; /* Espaciado a la derecha de la flecha */
+  margin-right: 0.5em; 
   color: #ffffff !important; 
 
 }
-/* Cambio de color al pasar el ratón sobre el botón */
+
 .btn-secondary:hover {
   background-color: #24D366 !important;
-  /* Cambia este valor al color verde que desees (#00ff00 es verde puro) */
+ 
 }
 
 .navbar-nav.left-links {
@@ -496,15 +491,23 @@ p {
 }
 
 .custom-dropdown-item {
-  background: none;
-  border: none;
-  color: inherit;
-  padding: 0.5rem 1rem; /* Puedes ajustar el espaciado según tus necesidades */
-  text-decoration: none;
-  display: flex;
-  align-items: center;
+  position: relative;
+  padding-right: 2rem; 
+
+
+  background-color: #012B65 !important;
+  color: inherit !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
+.custom-dropdown-item {
+  color:#ffffff !important;
+}
+
+.custom-dropdown-item i {
+  color: #ffffff !important;
+}
 
 /* Para pantallas mayores o iguales a 1500px */
 @media screen and (min-width: 1500px) {
@@ -522,15 +525,11 @@ p {
 
 @media screen and (max-width: 992px) {
 
-
-
-  /* Estilos para el contenedor de imágenes en la sección de registro/inicio de sesión */
   .register-login .container__image {
     min-height: 200px;
     height: 200px;
   }
 
-  /* Estilos para títulos */
   .titulo-inicio,
   h1 {
     text-align: center;
@@ -563,7 +562,6 @@ p {
 @media screen and (max-width: 868px) {
   .navbar-nav.left-links .nav-item {
     margin-right: 10px;
-    /* Ajusta el margen según sea necesario */
     font-size: 13px;
     margin: auto;
   }
@@ -574,7 +572,6 @@ p {
 @media screen and (max-width: 797px) {
   .navbar-nav.left-links .nav-item {
     margin-right: 10px;
-    /* Ajusta el margen según sea necesario */
     font-size: 13px;
     margin: auto;
   }
@@ -584,7 +581,7 @@ p {
     font-size: 13px;
     text-align: center;
     line-height: 2;
-    /* Ajusta este valor según sea necesario */
+   
 
   }
 
@@ -613,7 +610,7 @@ p {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(rgba(6, 15, 49, 0.705), rgba(7, 37, 72, 0.754)), url('../img/inicio de sesión/img-1.jpg');
+    background-image: linear-gradient(rgba(6, 15, 49, 0.705), rgba(7, 37, 72, 0.754)), url('../img/inicio de sesión/fondo-5.jpg');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -702,24 +699,71 @@ p {
  height: 32px;
  width: 100px;
  transform: translateX(0%); 
+ background-color:transparent;
 
 }
 
 .dropdown-menu li {
-margin-top: auto;
+margin-top: -10px;
 background-color:#ffffff00;
+height: 32px;
 }
 
 
 a.dropdown-item {
   margin-top: auto;
-  background-color:#1C4273;
+  background-color:#ffffff;
   width: auto;
   font-size: 13px;
+  margin: auto;
   }
 
 
+
+.left-links {
+    text-align: center; /* Alinea los enlaces al centro en pantallas pequeñas */
 }
+
+.left-links .nav-item {
+    margin-bottom: 10px; /* Añade un espacio entre cada elemento de la lista en pantallas pequeñas */
+    margin-top: 30px;
+ 
+}
+.left-links .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: -15px; /* Puedes ajustar según sea necesario */
+}
+
+.left-links img {
+ margin-right: 25px;
+ margin-left: 10px;
+ margin-top: -5px;
+
+}
+
+.left-links .first-span {
+  font-size: 13px;
+  text-align: center;
+}
+
+.left-links .second-span {
+  font-size: 13px;
+  text-align: center;
+}
+
+
+.left-links span {
+  display: block; /* Muestra los textos en bloques para ocupar el ancho completo */
+  margin-left: 0; /* Elimina el margen izquierdo para centrar el texto */
+  text-align: center; /* Centra el texto en pantallas pequeñas */
+}
+
+
+}
+
 
 @media screen and (max-width: 480px) {
   /* Muestra el botón de hamburguesa y oculta la barra de navegación principal */

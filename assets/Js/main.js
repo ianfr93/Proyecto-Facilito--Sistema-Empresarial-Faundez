@@ -66,3 +66,8 @@ function togglePassword() {
       eyeIcon.classList.add("fa-eye");
   }
 }
+
+$(document).ready(function () {
+  // Oculta la flecha de despliegue de Bootstrap al cargar la página
+  $('.custom-dropdown-item').siblings('.dropdown-toggle').removeClass('dropdown-toggle');
+});
