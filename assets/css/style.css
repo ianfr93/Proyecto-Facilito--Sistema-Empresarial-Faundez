@@ -570,7 +570,7 @@ p {
   }
 
   .btn-secondary {
-    width: 131px;
+    width: 100px;
     font-size: 13px;
     text-align: center;
     line-height: 2;
@@ -578,9 +578,22 @@ p {
 
   }
 
+  .btn2 a.btn-secondary {
+    width: 100px;
+    height: 32px;
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 15px auto 0;
+    padding: 8px 16px;
+   
+  }
+
 }
 
 @media screen and (max-width: 767px) {
+
+  
   .navbar-nav.ms-auto {
     margin-left: auto;
     /* Mueve los elementos a la derecha en resoluciones pequeñas */
@@ -627,33 +640,7 @@ p {
 
 @media screen and (max-width: 480px) {
   /* Muestra el botón de hamburguesa y oculta la barra de navegación principal */
-  .navbar-toggler {
-    display: block;
-    border-color: #ffffff!important;
   
-  }
-
-  .navbar-collapse {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: linear-gradient(rgba(6, 15, 49, 0.705), rgba(7, 37, 72, 0.754)), url('../img/inicio de sesión/img-1.jpg');
-    background-size: 100% 100%; /* Ajusta el tamaño del fondo para que cubra todo */
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 15px;
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    z-index: 1;
-}
-
-  .navbar-collapse a {
-    margin: 10px 0;
-    font-size: 18px;
-    color: #ffffff;
-    text-align: center;
-  }
 
   .navbar-nav.ms-auto .nav-item.dropdown {
    
