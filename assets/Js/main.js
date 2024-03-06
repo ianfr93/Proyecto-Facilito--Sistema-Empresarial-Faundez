@@ -8,9 +8,7 @@ function validateForm() {
 
   resetErrorMessages(); 
 
-  if (!nombre) {
-      document.getElementById('nombreError').innerText = 'Por favor, ingresa tu nombre.';
-  }
+ 
 
   if (!username) {
       document.getElementById('usernameError').innerText = 'Por favor, ingresa tu nombre de usuario.';
@@ -28,9 +26,7 @@ function validateForm() {
       document.getElementById('emailError').innerText = 'Por favor, ingresa tu dirección de correo electrónico.';
   }
 
-  if (!confirmEmail) {
-      document.getElementById('confirmEmailError').innerText = 'Por favor, confirma tu dirección de correo electrónico.';
-  }
+ 
 
 
 
