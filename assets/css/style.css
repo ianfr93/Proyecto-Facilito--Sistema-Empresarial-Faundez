@@ -592,14 +592,14 @@ p {
 }
 
 @media screen and (max-width: 767px) {
-
   /* Muestra el botón de hamburguesa y oculta la barra de navegación principal */
   .navbar-toggler {
     display: block;
+    border-color: #ffffff !important; /* Añade el cambio de color a blanco para las tres rayas */
   }
 
   .navbar-collapse {
-    display: none; /* Asegura que el menú desplegable esté oculto inicialmente */
+    display: none;
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient(rgba(6, 15, 49, 0.705), rgba(7, 37, 72, 0.754)), url('../img/inicio de sesión/img-1.jpg');
@@ -620,33 +620,28 @@ p {
     text-align: center;
   }
 
-  /* Resto de tus estilos ... */
-
   /* Añade el siguiente código para mostrar/ocultar el menú desplegable */
   .navbar-toggler:focus + .navbar-collapse,
   .navbar-collapse.show {
     display: flex;
   }
 
-  
+  /* Resto de tus estilos ... */
+
   .navbar-nav.ms-auto {
     margin-left: auto;
-    /* Mueve los elementos a la derecha en resoluciones pequeñas */
   }
 
   .navbar-nav.ms-auto .nav-item.dropdown {
     margin-right: 110px;
-    /* Ajusta el margen derecho según sea necesario */
   }
 
   .navbar-nav.ms-auto .btn2 {
     margin-right: 10px;
-    /* Ajusta el margen derecho del contenedor del botón */
   }
 
   .navbar-nav.left-links .nav-item {
     margin-right: 10px;
-    /* Ajusta el margen según sea necesario */
     font-size: 12px;
   }
 
@@ -658,7 +653,6 @@ p {
     line-height: 1.5;
     margin: 15px auto 0;
     padding: 8px 16px;
-    /* Ajusta el espaciado interno del botón */
     margin-left: -100px;
   }
 
@@ -675,33 +669,32 @@ p {
 
 @media screen and (max-width: 480px) {
   /* Muestra el botón de hamburguesa y oculta la barra de navegación principal */
-  
+  .navbar-toggler {
+    display: block;
+  }
 
   .navbar-nav.ms-auto .nav-item.dropdown {
-   
     transform: translateX(-25%);
   }
+
   .navbar-nav.me-auto.mb-2.mb-sm-0.left-links .nav-item {
-    width: 100%; /* Ajusta el ancho del elemento según sea necesario */
+    width: 100%;
     text-align: center;
     margin-top: -20px;
   }
 
   .navbar-nav.me-auto.mb-2.mb-sm-0.left-links .nav-item a.nav-link {
-    display: block; /* Ajusta según sea necesario para ocupar toda la anchura */
+    display: block;
     text-align: center;
   }
 
   .navbar-nav.me-auto.mb-2.mb-sm-0.left-links .nav-item a.nav-link img {
-    margin-right: 0; /* Elimina el margen derecho del icono */
+    margin-right: 0;
   }
-
-
 
   .dropdown-item {
     width: 100%;
     max-width: 200px;
-
   }
 
   .titulo-inicio,
@@ -713,36 +706,23 @@ p {
 
   .btn-primary {
     margin-top: 20px;
-    
   }
 
   .btn2 {
     text-align: center;
     align-items: center;
     margin: 15px auto 0;
-   
   }
 
-  /* Estilo del botón en el menú desplegable */
   .btn2 a.btn-secondary {
     color: #ffffff;
     margin-top: -10px;
     transform: translateX(-160px);
-  
   }
-
-
-  
 }
-
-  
 
 /* Para pantallas menores o iguales a 380px */
 @media screen and (max-width: 320px) {
-
-
-
-
   .marked-link {
     text-align: center;
   }
@@ -752,7 +732,6 @@ p {
     transform: translateX(3%);
     text-align: center;
   }
-
 
   .titulo-inicio,
   h1 {
