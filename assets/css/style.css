@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(rgba(15, 31, 88, 0.361) 0%, rgba(11, 61, 119, 0.353) 100%), url('../img/inicio de sesión/fondo-7.jpg');
+  background-image: linear-gradient(rgba(226, 227, 228, 0.12) 0%, rgba(11, 61, 119, 0.047) 100%), url('../img/inicio de sesión/fondo-7.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -212,8 +212,15 @@ body {
 .titulo-inicio {
   color: #012B65;
   text-align: center;
-  font-size: 60px;
+  font-size: 40px;
   margin-top: 50px;
+}
+
+.titulo-inicio-r {
+  color: #012B65;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
 }
 
 .register-link,
@@ -614,6 +621,18 @@ font-weight: 400;
   background-color: #4D6A93 !important; 
 }
 
+.table {
+  border-color: #dee2e6; /* Establece el color del borde a un tono similar al fondo */
+}
+
+
+.table thead th {
+  border-bottom: none;
+}
+
+.table tbody tr {
+  border-bottom: none;
+}
 
 
 /* Para pantallas mayores o iguales a 1500px */
