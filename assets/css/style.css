@@ -556,7 +556,7 @@ p {
 }
 
 .form-label span {
-
+background-color: transparent;
 color:#445F6F;
 font-weight: 400;
 }
