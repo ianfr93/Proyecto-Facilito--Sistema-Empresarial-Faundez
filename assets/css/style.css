@@ -5,22 +5,23 @@
 
 }
 
-html,
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
-  background-image: linear-gradient(rgba(33, 59, 151, 0.154), rgba(11, 61, 119, 0.411)), url('../img/inicio de sesión/fondo-6.jpg');
+body {
+  background-image: linear-gradient(rgba(15, 31, 88, 0.707) 0%, rgba(11, 61, 119, 0.353) 100%), url('../img/inicio de sesión/fondo-7.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   overflow-x: hidden;
-  max-width: 100%;
-  margin: 0;
+  width: 100%;
+  min-height: 100%;
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
- 
 }
 
 
