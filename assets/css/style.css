@@ -629,24 +629,29 @@ p {
   /* Muestra el botón de hamburguesa y oculta la barra de navegación principal */
   .navbar-toggler {
     display: block;
+    border-color: #ffffff!important;
+  
   }
 
   .navbar-collapse {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
+    background-image: linear-gradient(rgba(6, 15, 49, 0.705), rgba(7, 37, 72, 0.754)), url('../img/inicio de sesión/img-1.jpg');
+    background-size: 100% 100%; /* Ajusta el tamaño del fondo para que cubra todo */
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 15px;
     position: absolute;
     top: 60px;
     width: 100%;
     z-index: 1;
-  }
+}
 
   .navbar-collapse a {
     margin: 10px 0;
     font-size: 18px;
-    color: #333;
+    color: #ffffff;
     text-align: center;
   }
 
@@ -712,6 +717,10 @@ p {
 
 /* Para pantallas menores o iguales a 380px */
 @media screen and (max-width: 320px) {
+
+
+
+
   .marked-link {
     text-align: center;
   }
