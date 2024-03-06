@@ -1,10 +1,10 @@
 function validateForm() {
-  var nombre = document.getElementById('nombre').value;
+
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
   var confirmPassword = document.getElementById('confirmPassword').value;
   var email = document.getElementById('email').value;
-  var confirmEmail = document.getElementById('confirmEmail').value;
+
 
   resetErrorMessages(); 
 
