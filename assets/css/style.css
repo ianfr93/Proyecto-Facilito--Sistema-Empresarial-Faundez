@@ -836,15 +836,6 @@ color: #fff;
 
 
 
-@media screen and (max-width: 481px) {
-.left-links {
-  text-align: center;
-  transform: translateX(35%);
-
-}
-
-}
-
 
 @media screen and (max-width: 992px) {
 
@@ -1545,18 +1536,17 @@ color: #fff;
     margin-top: -25px;
   }
 
-
 }
+
 
 @media screen and (max-width: 481px) {
   .left-links {
     text-align: center;
     transform: translateX(35%);
-
+  
   }
-
-}
-
+  
+  }
 /* Para pantallas menores o iguales a 380px */
 @media screen and (max-width: 320px) {
   .marked-link {
