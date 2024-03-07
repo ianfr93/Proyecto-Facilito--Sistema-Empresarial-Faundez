@@ -9,6 +9,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   min-height: 100%;
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
+  height: 100%;
 }
 
 
@@ -645,12 +647,23 @@ color: #fff;
 /* Estilos para la paginación */
 .pagination {
   margin: 0;
-  padding: 10px 0;
   list-style: none;
   display: flex;
-  justify-content: center;
-
+  justify-content: flex-start; 
+  align-items: center; 
+  margin-top: 40px; 
 }
+
+.rows_count {
+  width: 20%;
+  display:flex;
+  text-align: right;
+  color: #999;
+  margin-left: auto;
+  margin-top: -30px; /* Ajusta según sea necesario */
+}
+
+
 
 .pagination li {
   margin: 0 5px;
@@ -659,20 +672,51 @@ color: #fff;
 .pagination li a {
   text-decoration: none;
   padding: 8px 12px;
-  background-color: #18355c;
-  color: #1e0303;
-  border: 1px solid #fff;
+  background-color: transparent;
+  color: #A4B0BE;
+  border: 1px solid transparent;
   border-radius: 4px;
 }
 
 .pagination li:hover a {
-  background-color: #24D366;
-  border-color: #24D366;
+  background-color: #00DEFF;
+  border-color: #ffffff;
+  color: #ffffff; 
 }
 
 .pagination li.active a {
-  background-color: #24D366;
-  border-color: #24D366;
+  background-color: #18355c;
+  border-color: #1C4273;
+}
+
+.pagination li.first a,
+.pagination li.prev a {
+  background-color: transparent;
+  color: #A4B0BE; /* Color del texto para first y prev */
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.pagination li.first:hover a,
+.pagination li.prev:hover a {
+  background-color: #00DEFF;
+  border-color: #ffffff;
+  color: #ffffff; /* Color del texto para first y prev al hacer hover */
+}
+
+.pagination li.next a,
+.pagination li.last a {
+  background-color: transparent;
+  color: #A4B0BE; /* Color del texto para next y last */
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.pagination li.next:hover a,
+.pagination li.last:hover a {
+  background-color: #00DEFF;
+  border-color: #ffffff;
+  color: #ffffff; /* Color del texto para next y last al hacer hover */
 }
 
 /* Otros estilos */
@@ -696,12 +740,6 @@ color: #fff;
   margin-top: 10px;
 }
 
-.rows_count {
-  width: 20%;
-  float: right;
-  text-align: right;
-  color: #999;
-}
 
 /* Agrega este código a tu hoja de estilos CSS */
 #identification.estilizado {
