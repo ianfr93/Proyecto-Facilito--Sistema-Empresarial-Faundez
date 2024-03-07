@@ -556,48 +556,49 @@ p {
 margin-top: 20px;
 }
 
-.form-label span {
-background-color: transparent;
-color:#445F6F;
-font-weight: 400;
-}
-
-
 /* Estilos específicos para el contenedor de filtrado */
 .filtrar-container {
-
-  margin-top: 10px; 
+  margin-top: 10px;
   margin-bottom: 40px;
 }
 
+.filtrar-container .form-label span {
+  color: #445F6F !important; 
+  font-weight: 300;
+}
+
+
 /* Estilos para el formulario de filtrado */
 .filtrar-container .row {
-  justify-content: center; 
-  width: 100%
+  justify-content: center;
+  width: 100%;
 }
 
 /* Ajustes de estilo para las etiquetas y selectores */
 .filtrar-container .form-label {
-
-  margin-bottom: 0.5rem; 
-  width: 100%; 
-  background-color: #F5F6F6!important;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  color: #012B65!important;
   height: 44px;
-
 }
 
 .filtrar-container .form-label label {
-  background-color:transparent !important;
-  
-
+  background-color: #ffffff !important;
 }
+
 .filtrar-container .form-select {
-
-  width: 100%; 
-  background-color: #F5F6F6!important;
+  width: 100%;
+  background-color: #ffffff !important;
   height: 44px;
-
+  color: #080808; /* Color del texto dentro del select */
 }
+
+.filtrar-container .form-select option {
+  background-color: #ffffff; /* Color del fondo de las opciones del select */
+}
+
+/* Puedes ajustar el color según tus preferencias */
+
 
 /* Estilos para el botón de búsqueda */
 .filtrar-container .btn-tertiary {
@@ -702,26 +703,20 @@ color: #fff;
   color: #999;
 }
 
-.pagination-container .pagination li:first-child a::before {
-  content: '\2190'; /* Código Unicode para la flecha izquierda */
-  font-family: 'raleway';
-  font-size: 18px;
+/* Agrega este código a tu hoja de estilos CSS */
+#identification.estilizado {
+  width: 100%;
+  height: 44px !important;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.pagination-container .pagination li:last-child a::before {
-  content: '\2192'; /* Código Unicode para la flecha derecha */
-  font-family: 'raleway';
-  font-size: 18px;
+/* Estilo para la etiqueta 'label' si es necesario */
+.form-label span {
+  font-weight: bold;
 }
-
-.pagination-container .pagination li:not(:first-child):not(:last-child) a::before {
-  font-family: 'FontAwesome', 'raleway'; /* Utiliza una lista para incluir ambas fuentes */
-  content: '\f105'; /* Código Unicode para un círculo sólido */
-  font-size: 18px;
-}
-
-
-
 /* Para pantallas mayores o iguales a 1500px */
 @media screen and (min-width: 1500px) {
 
