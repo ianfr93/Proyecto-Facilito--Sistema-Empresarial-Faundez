@@ -926,6 +926,10 @@ color: #fff;
 
 
 @media screen and (max-width: 797px) {
+
+  #carruselTexto {
+    display: none !important; /* Oculta el carrusel para resoluciones de 797px o inferiores */
+  }
   .navbar-nav.left-links .nav-item {
     margin-right: 10px;
     font-size: 13px;
