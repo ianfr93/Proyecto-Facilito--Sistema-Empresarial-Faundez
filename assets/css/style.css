@@ -628,17 +628,78 @@ font-weight: 400;
   background-color: #4D6A93 !important; 
 }
 
-.table {
-  border-color: #dee2e6; /* Establece el color del borde a un tono similar al fondo */
+.table th , table td{
+  text-align: center;
 }
 
-
-.table thead th {
-  border-bottom: none;
+table tr:nth-child(even){
+  background-color: #e4e3e3
 }
 
-.table tbody tr {
-  border-bottom: none;
+th {
+background: #333;
+color: #fff;
+}
+
+/* Estilos para la paginación */
+.pagination {
+  margin: 0;
+  padding: 10px 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #18355c;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination li a {
+  text-decoration: none;
+  padding: 8px 12px;
+  background-color: #18355c;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.pagination li:hover a {
+  background-color: #24D366;
+  border-color: #24D366;
+}
+
+.pagination li.active a {
+  background-color: #24D366;
+  border-color: #24D366;
+}
+
+/* Otros estilos */
+.header_wrap {
+  padding: 30px 0;
+}
+
+.num_rows {
+  width: 20%;
+  float: left;
+}
+
+.tb_search {
+  width: 20%;
+  float: right;
+}
+
+.pagination-container {
+  width: 100%;
+  float: left;
+  margin-top: 10px;
+}
+
+.rows_count {
+  width: 20%;
+  float: right;
+  text-align: right;
+  color: #999;
 }
 
 
@@ -993,6 +1054,32 @@ font-weight: 400;
     text-align: center;
     margin-top: 10px;
   }
+
+  .table th, .table td {
+    text-align: center;
+}
+
+.header_wrap {
+    padding: 15px 0;
+}
+
+.num_rows,
+.tb_search,
+.pagination-container,
+.rows_count {
+    width: 100%;
+    float: none;
+    text-align: center; /* Alinea al centro en dispositivos pequeños */
+    margin-bottom: 10px; /* Añade un espacio entre elementos */
+}
+
+.pagination-container {
+    margin-top: 10px; /* Añade espacio arriba en dispositivos pequeños */
+}
+
+
+
+
 }
 
 @media screen and (max-width: 754px) {

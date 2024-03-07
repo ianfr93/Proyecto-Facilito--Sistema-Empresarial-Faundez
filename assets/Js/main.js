@@ -63,7 +63,78 @@ function togglePassword() {
   }
 }
 
+
+
 $(document).ready(function () {
-  // Oculta la flecha de despliegue de Bootstrap al cargar la página
-  $('.custom-dropdown-item').siblings('.dropdown-toggle').removeClass('dropdown-toggle');
+  var tableId = '#table-id';
+  getPagination(tableId);
+  $('#maxRows').trigger('change');
+
+  $('#maxRows').on('change', function () {
+      $('.pagination').html('');
+      var trnum = 0;
+      var maxRows = parseInt($(this).val());
+
+      var totalRows = $(tableId + ' tbody tr').length;
+
+      $(tableId + ' tr:gt(0)').each(function () {
+          trnum++;
+          if (trnum > maxRows) {
+              $(this).hide();
+          }
+          if (trnum <= maxRows) {
+              $(this).show();
+          }
+      });
+
+      if (totalRows > maxRows) {
+          var pagenum = Math.ceil(totalRows / maxRows);
+
+          for (var i = 1; i <= pagenum;) {
+              $('.pagination').append('<li data-page="' + i + '">\
+                  <span>' + i++ + '<span class="sr-only">(current)</span></span>\
+              </li>').show();
+          }
+      }
+
+      $('.pagination li:first-child').addClass('active');
+      showig_rows_count(maxRows, 1, totalRows);
+
+      $('.pagination li').on('click', function (e) {
+          e.preventDefault();
+          var pageNum = $(this).attr('data-page');
+          var trIndex = 0;
+          $('.pagination li').removeClass('active');
+          $(this).addClass('active');
+
+          $(tableId + ' tr:gt(0)').each(function () {
+              trIndex++;
+              if (trIndex > (maxRows * pageNum) || trIndex <= ((maxRows * pageNum) - maxRows)) {
+                  $(this).hide();
+              } else {
+                  $(this).show();
+              }
+          });
+      });
+  });
+
+  default_index();
 });
+
+function showig_rows_count(maxRows, pageNum, totalRows) {
+  var end_index = maxRows * pageNum;
+  var start_index = ((maxRows * pageNum) - maxRows) + parseFloat(1);
+  var string = 'Showing ' + start_index + ' to ' + end_index + ' of ' + totalRows + ' entries';
+  $('.rows_count').html(string);
+}
+
+function default_index() {
+  $('table tr:eq(0)').prepend('<th> ID </th>');
+
+  var id = 0;
+
+  $('table tr:gt(0)').each(function () {
+      id++;
+      $(this).prepend('<td>' + id + '</td>');
+  });
+}
