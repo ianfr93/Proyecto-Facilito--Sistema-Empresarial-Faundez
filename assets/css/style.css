@@ -1677,7 +1677,7 @@ color: #fff;
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
 
   .left-links {
     text-align: center;
