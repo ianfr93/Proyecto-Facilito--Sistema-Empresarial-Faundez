@@ -1684,7 +1684,7 @@ color: #fff;
   }
 
   .navbar-nav.ms-auto .nav-item.dropdown {
-    transform: translateX(-90%);
+    transform: translateX(-50%);
     margin-top: -20px;
   }
 
@@ -1731,7 +1731,7 @@ color: #fff;
   .btn2 a.btn-secondary {
     color: #ffffff;
     margin-top: -10px;
-    transform: translateX(-170px);
+    transform: translateX(-128px);
   }
 
   .left-links img {
@@ -1744,13 +1744,13 @@ color: #fff;
     border: 1px solid #ffffff;
     border-radius: 3px;
     background-color: #112540;
-    transform: translateX(-180%);
+    transform: translateX(-350%);
   }
 
 
   .left-links {
     text-align: center;
-    transform: translateX(-55%);
+    transform: translateX(-35%);
 
   }
 
@@ -1762,24 +1762,15 @@ color: #fff;
     font-size: 13px;
     text-align: center;
     margin-top: -25px;
-    transform: translateX(13%);
+    transform: translateX(-70%);
   }
 
   .left-links .second-span {
     font-size: 13px;
     text-align: center;
-    transform: translateX(20%);
+    transform: translateX(-60%);
     margin-top: -25px;
   }
-
-
-
-
-
-
-
-
-
 
 }
   
