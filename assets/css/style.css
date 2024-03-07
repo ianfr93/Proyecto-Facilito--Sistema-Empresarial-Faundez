@@ -663,6 +663,9 @@ color: #fff;
   margin-top: -30px; /* Ajusta según sea necesario */
 }
 
+.custom-left-align {
+  margin-right:430px;
+}
 
 
 .pagination li {
@@ -754,6 +757,46 @@ color: #fff;
 /* Estilo para la etiqueta 'label' si es necesario */
 .form-label span {
   font-weight: bold;
+}
+
+/* Estilos del contenedor principal */
+.container.filtrar-container {
+  margin-top: 20px;
+}
+
+/* Estilos de las etiquetas de formulario */
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Estilos de los campos de entrada de texto y fecha */
+.form-control.estilizado {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilos del botón Buscar */
+
+
+/* Estilos de la fila y columnas */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 /* Para pantallas mayores o iguales a 1500px */
 @media screen and (min-width: 1500px) {
