@@ -770,6 +770,7 @@ color: #fff;
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+ 
 }
 
 /* Estilos de los campos de entrada de texto y fecha */
@@ -780,7 +781,7 @@ color: #fff;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 /* Estilos del botón Buscar */
@@ -799,10 +800,6 @@ color: #fff;
   max-width: 33.333333%;
   padding-right: 15px;
   padding-left: 15px;
-}
-
-.formulario-container .col-md-4 label.form-label span {
-  font-size: 13px; /* Ajusta el tamaño del texto según tus necesidades */
 }
 
 
@@ -887,6 +884,11 @@ color: #fff;
     font-size: 15px;
     text-align: center;
   }
+}
+
+.form-control.estilizado {
+
+  font-size: 13px;
 }
 
 @media (max-width: 990px) {
@@ -985,6 +987,10 @@ color: #fff;
   .left-links .second-span {
     font-size: 15px;
     text-align: center;
+  }
+
+  .form-control.estilizado {
+   font-size: 10px;
   }
 }
 
@@ -1192,6 +1198,9 @@ color: #fff;
 .pagination-container {
     margin-top: 10px; /* Añade espacio arriba en dispositivos pequeños */
 }
+.form-control.estilizado {
+  font-size: 10px;
+ }
 
 
 
@@ -1857,5 +1866,8 @@ color: #fff;
   .btn2 a.btn-secondary {
     transform: translateX(-90px);
   }
+  .form-control.estilizado {
+    font-size: 8px;
+   }
 
 }
