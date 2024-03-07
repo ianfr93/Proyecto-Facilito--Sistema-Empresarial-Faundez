@@ -800,6 +800,14 @@ color: #fff;
   padding-right: 15px;
   padding-left: 15px;
 }
+
+.formulario-container .col-md-4 label.form-label span {
+  font-size: 13px; /* Ajusta el tamaño del texto según tus necesidades */
+}
+
+
+
+
 /* Para pantallas mayores o iguales a 1500px */
 @media screen and (min-width: 1500px) {
 
