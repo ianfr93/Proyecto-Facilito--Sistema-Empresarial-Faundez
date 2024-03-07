@@ -63,8 +63,6 @@ function togglePassword() {
   }
 }
 
-
-
 $(document).ready(function () {
   var tableId = '#table-id';
   getPagination(tableId);
@@ -92,8 +90,9 @@ $(document).ready(function () {
 
           for (var i = 1; i <= pagenum;) {
               $('.pagination').append('<li data-page="' + i + '">\
-                  <span>' + i++ + '<span class="sr-only">(current)</span></span>\
-              </li>').show();
+                  <span>' + i + '<span class="sr-only">(current)</span></span>\
+              </li>');
+              i++;
           }
       }
 
@@ -123,7 +122,7 @@ $(document).ready(function () {
 
 function showig_rows_count(maxRows, pageNum, totalRows) {
   var end_index = maxRows * pageNum;
-  var start_index = ((maxRows * pageNum) - maxRows) + parseFloat(1);
+  var start_index = ((maxRows * pageNum) - maxRows) + 1;
   var string = 'Showing ' + start_index + ' to ' + end_index + ' of ' + totalRows + ' entries';
   $('.rows_count').html(string);
 }

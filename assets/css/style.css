@@ -648,7 +648,7 @@ color: #fff;
   list-style: none;
   display: flex;
   justify-content: center;
-  background-color: #18355c;
+
 }
 
 .pagination li {
@@ -659,7 +659,7 @@ color: #fff;
   text-decoration: none;
   padding: 8px 12px;
   background-color: #18355c;
-  color: #fff;
+  color: #1e0303;
   border: 1px solid #fff;
   border-radius: 4px;
 }
