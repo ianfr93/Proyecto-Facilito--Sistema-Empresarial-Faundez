@@ -63,76 +63,85 @@ function togglePassword() {
   }
 }
 
+
+
+
+
+
+
 $(document).ready(function () {
-  var tableId = '#table-id';
-  $('#maxRows').trigger('change');
+  // Número de elementos por página
+  var itemsPerPage = 10;
 
-  $('#maxRows').on('change', function () {
-      $('.pagination').html('');
-      var trnum = 0;
-      var maxRows = parseInt($(this).val());
+  // Inicializa la paginación
+  $('#table-id').after('<div id="pagination-container"></div>');
+  var rows = $('#table-id tbody tr');
+  var originalRows = rows.clone(); // Copia las filas originales para su posterior restauración
+  var rowsCount = rows.length;
+  var pageCount = Math.ceil(rowsCount / itemsPerPage);
 
-      var totalRows = $(tableId + ' tbody tr').length;
+  $('#pagination-container').twbsPagination({
+      totalPages: pageCount,
+      visiblePages: 5, // Puedes ajustar este valor según tus preferencias
+      onPageClick: function (event, page) {
+          var startIndex = (page - 1) * itemsPerPage;
+          var endIndex = startIndex + itemsPerPage;
 
-      $(tableId + ' tr:gt(0)').each(function () {
-          trnum++;
-          if (trnum > maxRows) {
-              $(this).hide();
-          }
-          if (trnum <= maxRows) {
-              $(this).show();
-          }
-      });
+          // Oculta todas las filas
+          rows.hide();
 
-      if (totalRows > maxRows) {
-          var pagenum = Math.ceil(totalRows / maxRows);
+          // Muestra solo las filas de la página actual
+          rows.slice(startIndex, endIndex).show();
 
-          for (var i = 1; i <= pagenum;) {
-              $('.pagination').append('<li data-page="' + i + '">\
-                  <span>' + i + '<span class="sr-only">(current)</span></span>\
-              </li>');
-              i++;
-          }
+          // Actualiza el mensaje de conteo de filas
+          var currentCount = Math.min(itemsPerPage, rowsCount - startIndex);
+          var totalCount = rowsCount;
+          $('.rows_count').text('Showing ' + (startIndex + 1) + ' to ' + (startIndex + currentCount) + ' of ' + totalCount + ' entries');
       }
-
-      $('.pagination li:first-child').addClass('active');
-      showig_rows_count(maxRows, 1, totalRows);
   });
 
-  $('.pagination li').on('click', function (e) {
-      e.preventDefault();
-      var pageNum = $(this).attr('data-page');
-      var trIndex = 0;
-      $('.pagination li').removeClass('active');
-      $(this).addClass('active');
+  // Evento de click en el botón de buscar
+  $('.btn-tertiary').on('click', function () {
+      var identificationValue = $('#identification').val();
+      var statusValue = $('#status').val();
 
-      $(tableId + ' tr:gt(0)').each(function () {
-          trIndex++;
-          if (trIndex > (maxRows * pageNum) || trIndex <= ((maxRows * pageNum) - maxRows)) {
-              $(this).hide();
-          } else {
-              $(this).show();
+      // Restaura las filas originales
+      rows = originalRows.clone();
+
+      // Filtra las filas según los valores seleccionados
+      rows = rows.filter(function () {
+          var rowIdentification = $(this).find('td:eq(0)').text(); // Ajusta el índice según la columna de identificación
+          var rowStatus = $(this).find('td:eq(1)').text(); // Ajusta el índice según la columna de estado
+
+          return (identificationValue === 'Rut-empresa' && rowIdentification.includes('Rut')) ||
+                 (identificationValue === 'otro' && !rowIdentification.includes('Rut')) ||
+                 (statusValue === 'activo' && rowStatus === 'Activo') ||
+                 (statusValue === 'inactivo' && rowStatus === 'Inactivo') ||
+                 (statusValue === 'migracion' && rowStatus === 'Migración');
+      });
+
+      // Actualiza las filas visibles según los filtros
+      rows.hide();
+      rows.slice(0, itemsPerPage).show();
+
+      // Actualiza la paginación
+      var filteredRowsCount = rows.length;
+      var filteredPageCount = Math.ceil(filteredRowsCount / itemsPerPage);
+      $('#pagination-container').twbsPagination('destroy');
+      $('#pagination-container').twbsPagination({
+          totalPages: filteredPageCount,
+          visiblePages: 5,
+          onPageClick: function (event, page) {
+              var startIndex = (page - 1) * itemsPerPage;
+              var endIndex = startIndex + itemsPerPage;
+
+              // Muestra solo las filas de la página actual
+              rows.slice(startIndex, endIndex).show();
+
+              // Actualiza el mensaje de conteo de filas
+              var currentCount = Math.min(itemsPerPage, filteredRowsCount - startIndex);
+              $('.rows_count').text('Showing ' + (startIndex + 1) + ' to ' + (startIndex + currentCount) + ' of ' + filteredRowsCount + ' entries');
           }
       });
   });
-
-  default_index();
 });
-
-function showig_rows_count(maxRows, pageNum, totalRows) {
-  var end_index = maxRows * pageNum;
-  var start_index = ((maxRows * pageNum) - maxRows) + 1;
-  var string = 'Showing ' + start_index + ' to ' + end_index + ' of ' + totalRows + ' entries';
-  $('.rows_count').html(string);
-}
-
-function default_index() {
-  $('table tr:eq(0)').prepend('<th> ID </th>');
-
-  var id = 0;
-
-  $('table tr:gt(0)').each(function () {
-      id++;
-      $(this).prepend('<td>' + id + '</td>');
-  });
-}

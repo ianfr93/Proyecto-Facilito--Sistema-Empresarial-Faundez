@@ -702,6 +702,25 @@ color: #fff;
   color: #999;
 }
 
+.pagination-container .pagination li:first-child a::before {
+  content: '\2190'; /* Código Unicode para la flecha izquierda */
+  font-family: 'raleway';
+  font-size: 18px;
+}
+
+.pagination-container .pagination li:last-child a::before {
+  content: '\2192'; /* Código Unicode para la flecha derecha */
+  font-family: 'raleway';
+  font-size: 18px;
+}
+
+.pagination-container .pagination li:not(:first-child):not(:last-child) a::before {
+  font-family: 'FontAwesome', 'raleway'; /* Utiliza una lista para incluir ambas fuentes */
+  content: '\f105'; /* Código Unicode para un círculo sólido */
+  font-size: 18px;
+}
+
+
 
 /* Para pantallas mayores o iguales a 1500px */
 @media screen and (min-width: 1500px) {
