@@ -882,6 +882,10 @@ color: #fff;
 }
 
 @media (max-width: 990px) {
+
+  #carruselTexto {
+    display: none !important; /* Oculta el carrusel para resoluciones de 990px o inferiores */
+  }
   .dropdown-1 {
     margin-left: 190px;
   }
