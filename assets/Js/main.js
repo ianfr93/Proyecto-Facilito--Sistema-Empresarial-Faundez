@@ -65,7 +65,6 @@ function togglePassword() {
 
 $(document).ready(function () {
   var tableId = '#table-id';
-  getPagination(tableId);
   $('#maxRows').trigger('change');
 
   $('#maxRows').on('change', function () {
@@ -98,22 +97,22 @@ $(document).ready(function () {
 
       $('.pagination li:first-child').addClass('active');
       showig_rows_count(maxRows, 1, totalRows);
+  });
 
-      $('.pagination li').on('click', function (e) {
-          e.preventDefault();
-          var pageNum = $(this).attr('data-page');
-          var trIndex = 0;
-          $('.pagination li').removeClass('active');
-          $(this).addClass('active');
+  $('.pagination li').on('click', function (e) {
+      e.preventDefault();
+      var pageNum = $(this).attr('data-page');
+      var trIndex = 0;
+      $('.pagination li').removeClass('active');
+      $(this).addClass('active');
 
-          $(tableId + ' tr:gt(0)').each(function () {
-              trIndex++;
-              if (trIndex > (maxRows * pageNum) || trIndex <= ((maxRows * pageNum) - maxRows)) {
-                  $(this).hide();
-              } else {
-                  $(this).show();
-              }
-          });
+      $(tableId + ' tr:gt(0)').each(function () {
+          trIndex++;
+          if (trIndex > (maxRows * pageNum) || trIndex <= ((maxRows * pageNum) - maxRows)) {
+              $(this).hide();
+          } else {
+              $(this).show();
+          }
       });
   });
 
